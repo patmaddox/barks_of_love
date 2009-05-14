@@ -8,6 +8,15 @@ namespace :bootstrap do
     end
   end
 
+  desc "Create empty log files"
+  task :create_log_files do
+    # Necessary because installing gems will create a test.log file as root,
+    # which causes warnings on subsequent runs
+    Dir.chdir(RAILS_ROOT + '/log') do
+      %w(development.log test.log).each {|log| FileUtils.touch(log) }
+    end
+  end
+
   desc "Copy the database.yml file"
   task :copy_db_yml do
     Dir.chdir(RAILS_ROOT + '/config') do
@@ -25,4 +34,5 @@ namespace :bootstrap do
 end
 
 desc "Bootstrap a new project"
-task :bootstrap => ["bootstrap:create_dirs", "bootstrap:copy_db_yml", "bootstrap:install_gems"]
+task :bootstrap => ["bootstrap:create_dirs", "bootstrap:create_log_files", "bootstrap:copy_db_yml",
+                    "bootstrap:install_gems"]
