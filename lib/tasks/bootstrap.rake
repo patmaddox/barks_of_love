@@ -15,13 +15,11 @@ namespace :bootstrap do
     end
   end
 
-  desc "Install required gems with geminstaller"
+  desc "Install gems needed for testing"
   task :install_gems do
-    `sudo gem install geminstaller` unless `gem list geminstaller`.include?('geminstaller')
     puts "Installing required gems"
     Dir.chdir(RAILS_ROOT) do
-      `sudo geminstaller`
-      `sudo geminstaller -c config/geminstaller_test.yml` if File.exist?('config/geminstaller_test.yml')
+      `sudo rake gems:install RAILS_ENV=test`
     end
   end
 
