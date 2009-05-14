@@ -9,3 +9,6 @@ Spec::Runner.configure do |config|
   config.use_instantiated_fixtures  = false
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
 end
+
+require RAILS_ROOT + '/bdd_support/database_cleaner'
+DatabaseCleaner.clean

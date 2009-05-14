@@ -16,3 +16,5 @@ end
 require 'cucumber/rails/rspec'
 require 'webrat/core/matchers'
 require RAILS_ROOT + '/bdd_support/fixjour'
+require RAILS_ROOT + '/bdd_support/database_cleaner'
+DatabaseCleaner.clean

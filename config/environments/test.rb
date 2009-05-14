@@ -25,3 +25,4 @@ config.gem "rspec-rails", :lib => false
 config.gem "cucumber"
 config.gem "webrat"
 config.gem "nakajima-fixjour", :lib => "fixjour"
+config.gem "bmabey-database_cleaner", :lib => "database_cleaner"
