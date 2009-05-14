@@ -22,18 +22,7 @@ namespace :bootstrap do
       `sudo rake gems:install RAILS_ENV=test`
     end
   end
-
-  desc "Generate rspec"
-  task :generate_rspec do
-    Dir.chdir(RAILS_ROOT) { `ruby script/generate rspec` unless File.directory?('spec') }
-  end
-
-  desc "Generate cucumber"
-  task :generate_cucumber do
-    Dir.chdir(RAILS_ROOT) { `ruby script/generate cucumber` unless File.directory?('features') }
-  end
 end
 
 desc "Bootstrap a new project"
-task :bootstrap => ["bootstrap:create_dirs", "bootstrap:copy_db_yml", "bootstrap:install_gems",
-                    "bootstrap:generate_rspec", "bootstrap:generate_cucumber"]
+task :bootstrap => ["bootstrap:create_dirs", "bootstrap:copy_db_yml", "bootstrap:install_gems"]
