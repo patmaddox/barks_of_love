@@ -24,3 +24,4 @@ config.action_mailer.delivery_method = :test
 config.gem "rspec-rails", :lib => false
 config.gem "cucumber"
 config.gem "webrat"
+config.gem "nakajima-fixjour", :lib => "fixjour"
