@@ -1,0 +1,2 @@
+module AdminCourtesyListingsHelper
+end

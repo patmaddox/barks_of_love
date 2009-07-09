@@ -13,6 +13,7 @@ class CreateCourtesyListings < ActiveRecord::Migration
       t.string :contact_name
       t.string :contact_phone
       t.string :contact_email
+      t.boolean :verified, :allow_nil => false, :default => false
       t.timestamps
     end
   end

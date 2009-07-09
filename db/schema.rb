@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(:version => 20090709082617) do
     t.string   "contact_name"
     t.string   "contact_phone"
     t.string   "contact_email"
+    t.boolean  "verified",        :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

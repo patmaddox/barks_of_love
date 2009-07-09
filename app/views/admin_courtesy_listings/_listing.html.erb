@@ -1,0 +1,18 @@
+<div class='listing'>
+  <h2><%= h listing.dog_name %></h2>
+  <h3>Contact info</h3>
+  <div>Contact name: <%= h listing.contact_name %></div>
+  <div>Contact email: <%= h(listing.contact_email || 'not given') %></div>
+  <div>Contact phone: <%= h(listing.contact_phone || 'not given') %></div>
+
+  <h3>Dog info</h3>
+  <div>Age: <%= listing.age %> months</div>
+  <div>Sex: <%= listing.sex %></div>
+  <div>Spayed/neutered? <%= yes_or_no listing.neutered? %></div>
+  <div>Vaccinations up to date? <%= yes_or_no listing.vacc_up_to_date? %></div>
+  <div>Good with dogs? <%= yes_or_no listing.good_with_dogs? %></div>
+  <div>Good with cats? <%= yes_or_no listing.good_with_cats? %></div>
+  <div>Good with kids? <%= yes_or_no listing.good_with_kids? %></div>
+  <h3>Description</h3>
+  <p><%= h listing.description %></p>
+</div>

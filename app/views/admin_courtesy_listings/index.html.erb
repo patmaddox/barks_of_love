@@ -1,0 +1,9 @@
+<% unless @pending_listings.empty? %>
+  <h1>Pending listings</h1>
+  <%= render :partial => 'admin_courtesy_listings/listing', :collection => @pending_listings %>
+<% end %>
+
+<% unless @verified_listings.empty? %>
+  <h1>Verified listings</h1>
+  <%= render :partial => 'admin_courtesy_listings/listing', :collection => @verified_listings %>
+<% end %>
