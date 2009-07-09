@@ -1,0 +1,21 @@
+<h1>Add a courtesy listing</h1>
+
+<%= error_messages_for :courtesy_listing %>
+
+<% form_for @courtesy_listing do |f| %>
+  <table>
+    <tr><td>Dog's name:</td><td><%= f.text_field :dog_name %></td></tr>
+    <tr><td>Dog's age (in months):</td><td><%= f.text_field :age, :size => 3 %></td></tr>
+    <tr><td>Sex:</td><td><%= f.radio_button :sex, CourtesyListing::MALE %>male <%= f.radio_button :sex, CourtesyListing::FEMALE %>female</td></tr>
+    <tr><td>Spayed/Neutered:</td><td><%= f.radio_button :neutered, true %>yes <%= f.radio_button :neutered, false %>no</td></tr>
+    <tr><td>Vaccinations up to date:</td><td><%= f.radio_button :vacc_up_to_date, true %>yes <%= f.radio_button :vacc_up_to_date, false %>no</td></tr>
+    <tr><td>Good with dogs:</td><td><%= f.radio_button :good_with_dogs, true %>yes <%= f.radio_button :good_with_dogs, false %>no</td></tr>
+    <tr><td>Good with cats:</td><td><%= f.radio_button :good_with_cats, true %>yes <%= f.radio_button :good_with_cats, false %>no</td></tr>
+    <tr><td>Good with kids:</td><td><%= f.radio_button :good_with_kids, true %>yes <%= f.radio_button :good_with_kids, false %>no</td></tr>
+    <tr><td>Description:</td><td><%= f.text_area :description, :rows => 8, :cols => 30 %></td></tr>
+    <tr><td>Contact name:</td><td><%= f.text_field :contact_name %></td></tr>
+    <tr><td>Contact phone #:</td><td><%= f.text_field :contact_phone %></td></tr>
+    <tr><td>Contact email address:</td><td><%= f.text_field :contact_email %></td></tr>
+  </table>
+  <%= f.submit 'List my dog please!' %>
+<% end %>

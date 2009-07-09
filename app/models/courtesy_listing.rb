@@ -2,7 +2,6 @@ class CourtesyListing < ActiveRecord::Base
   MALE = 'male'; FEMALE = 'female'
 
   validates_presence_of :dog_name
-  validates_presence_of :age
   validates_numericality_of :age
   validates_presence_of :sex
   validates_presence_of :description

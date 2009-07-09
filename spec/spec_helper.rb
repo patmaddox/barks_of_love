@@ -10,5 +10,9 @@ Spec::Runner.configure do |config|
   config.fixture_path = RAILS_ROOT + '/spec/fixtures/'
 end
 
+class Spec::Rails::Example::ControllerExampleGroup
+  integrate_views
+end
+
 require RAILS_ROOT + '/bdd_support/database_cleaner'
 DatabaseCleaner.clean

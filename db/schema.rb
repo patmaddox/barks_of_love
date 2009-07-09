@@ -15,11 +15,11 @@ ActiveRecord::Schema.define(:version => 20090709082617) do
     t.string   "dog_name"
     t.integer  "age"
     t.string   "sex"
-    t.boolean  "neutered",        :default => false
-    t.boolean  "vacc_up_to_date", :default => false
-    t.boolean  "good_with_dogs",  :default => false
-    t.boolean  "good_with_cats",  :default => false
-    t.boolean  "good_with_kids",  :default => false
+    t.boolean  "neutered"
+    t.boolean  "vacc_up_to_date"
+    t.boolean  "good_with_dogs"
+    t.boolean  "good_with_cats"
+    t.boolean  "good_with_kids"
     t.text     "description"
     t.string   "contact_name"
     t.string   "contact_phone"

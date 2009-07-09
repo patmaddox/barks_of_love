@@ -4,11 +4,11 @@ class CreateCourtesyListings < ActiveRecord::Migration
       t.string :dog_name
       t.integer :age
       t.string :sex
-      t.boolean :neutered, :allow_nil => false, :default => false
-      t.boolean :vacc_up_to_date, :allow_nil => false, :default => false
-      t.boolean :good_with_dogs, :allow_nil => false, :default => false
-      t.boolean :good_with_cats, :allow_nil => false, :default => false
-      t.boolean :good_with_kids, :allow_nil => false, :default => false
+      t.boolean :neutered, :allow_nil => false
+      t.boolean :vacc_up_to_date, :allow_nil => false
+      t.boolean :good_with_dogs, :allow_nil => false
+      t.boolean :good_with_cats, :allow_nil => false
+      t.boolean :good_with_kids, :allow_nil => false
       t.text :description
       t.string :contact_name
       t.string :contact_phone
